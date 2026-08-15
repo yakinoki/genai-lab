@@ -1,21 +1,47 @@
-# Gemini
+# 01_gemini
 
 Gemini APIをPythonから利用する基本的な実験。
 
 ## Purpose
 
-Gemini APIの基本的な利用方法を理解する。
-
-このディレクトリでは、まずSDKを直接利用し、
-LLMアプリケーションの基本的な構成を確認する。
+Gemini APIの基本的な利用方法とレスポンス構造を理解する。
+サードパーティのフレームワークに依存せず、公式SDK (`google-genai`) を直接操作してモデル呼出の原点を確認する。
 
 ## Environment
 
-- Python 3.x
+- Python 3.10+
 - `google-genai`
 
-Install:
+### Installation
 
 ```bash
 pip install google-genai
 ```
+
+### Environment Variables
+
+1. [Google AI Studio](https://aistudio.google.com/) にアクセスし、Google アカウントでログインします。
+2. 「Get API key」 > 「Create API key」 から本物の API キーを発行します。
+3. ターミナルで発行された API キー（`AIzaSy...` で始まる文字列）を環境変数に設定します。
+
+```bash
+export GEMINI_API_KEY="AIzaSyXXXXXXXXXXXXXXXXXXXXX"
+```
+
+## Experiments
+
+| File | Description |
+|---|---|
+| `01_basic_api.py` | `gemini-2.5-flash` を用いた最小限のテキスト生成 |
+
+## Execution
+
+```bash
+python 01_basic_api.py
+```
+
+## Key Learnings / Notes
+
+- **SDK**: `google-genai`（統合された新しい公式SDK）を使用。
+- **認証**: `genai.Client()` はデフォルトで環境変数 `GEMINI_API_KEY` を参照する。
+- **モデル選択**: 軽量・高速な検証には `gemini-2.5-flash` を基本として利用する。
