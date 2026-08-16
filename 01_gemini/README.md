@@ -15,29 +15,40 @@ Gemini APIの基本的な利用方法とレスポンス構造を理解する。
 ### Installation
 
 ```bash
-pip install google-genai
+py -m pip install google-genai
 ```
 
 ### Environment Variables
 
 1. [Google AI Studio](https://aistudio.google.com/) にアクセスし、Google アカウントでログインします。
 2. 「Get API key」 > 「Create API key」 から本物の API キーを発行します。
-3. ターミナルで発行された API キー（`AIzaSy...` で始まる文字列）を環境変数に設定します。
+3. ターミナルで発行された API キーを環境変数に設定します。
 
+macOS/Linux の場合
 ```bash
-export GEMINI_API_KEY="AIzaSyXXXXXXXXXXXXXXXXXXXXX"
+export GEMINI_API_KEY="XXXXXXXXXXXXXXXXXXXXX"
+```
+
+Windows (PowerShell) の場合
+```
+$env:GEMINI_API_KEY="XXXXXXXXXXXXXXXXXXXXX"
+```
+
+以下のコードでAPIを確認
+```
+echo $env:GEMINI_API_KEY
 ```
 
 ## Experiments
 
 | File | Description |
 |---|---|
-| `01_basic_api.py` | `gemini-2.5-flash` を用いた最小限のテキスト生成 |
+| `01_basic_api.py` | `gemini-3.5-flash` を用いた最小限のテキスト生成 |
 
 ## Execution
 
 ```bash
-python 01_basic_api.py
+py 01_basic_api.py
 ```
 
 ## Key Learnings / Notes
