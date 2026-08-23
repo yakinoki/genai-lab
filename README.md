@@ -8,6 +8,7 @@
 
 - 生成AI関連技術を実際に触って理解する
 - Gemini / Vertex AI などのGoogle Cloud系サービスを試す
+- Hugging Faceを通じたオープンソースLLM/SLMやモデル評価・データセットの活用を検証する
 - RAG、Agent、Tool Use、MCPなどの技術を検証する
 - データ分析と生成AIを組み合わせる
 - AIを使った開発そのものを実験する
@@ -24,9 +25,10 @@
 | `05_tool_use` | Tool Use / Function Calling | - |
 | `06_agent` | AI Agents | - |
 | `07_mcp` | Model Context Protocol | - |
-| `08_document_analysis` | Document analysis | - |
-| `09_data_analysis` | Data analysis with GenAI | - |
-| `10_business_usecase` | Business use cases | - |
+| `08_huggingface` | Hugging Face Hub / Datasets / Local Inference | - |
+| `09_document_analysis` | Document analysis | - |
+| `10_data_analysis` | Data analysis with GenAI | - |
+| `11_business_usecase` | Business use cases | - |
 | `experiments` | Miscellaneous experiments | - |
 
 ## Environment
@@ -36,6 +38,7 @@
 - Gemini
 - Vertex AI
 - BigQuery
+- Hugging Face
 
 ## Philosophy
 
